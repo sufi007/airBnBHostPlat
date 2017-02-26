@@ -10,6 +10,9 @@ $(document).ready(function() {
 	        var email = $('#emailid').val();
 	        var password = $('#passwordid').val();
 
+	        var emailName = email.split("@")[0].toLowerCase();
+
+
 	        ref.push({
 	            email: email,
 	            password:password
@@ -27,8 +30,13 @@ $(document).ready(function() {
 	                    async: false
 	                });
 
-	        $.getJSON('https://bnb.firebaseio.com/airbunny/example_username/rank.json', function(data) {
+
+	        var getJSONUrl = "https://bnb.firebaseio.com/airbunny/" + emailName + "/rank.json";
+
+	        $.getJSON(getJSONUrl, function(data) {
 	                    console.log(data)
+    		            $('#rank').html(data.rank)
+
 	                });
 	        alert('Entered.  Sent.');
 	    }
@@ -37,6 +45,9 @@ $(document).ready(function() {
 	$('#sendButton').click(function() {
 		var email = $('#emailid').val();
 		var password = $('#passwordid').val();
+
+		var emailName = email.split("@")[0].toLowerCase();
+		alert(emailName);
 
 		ref.push({
 		    email: email,
@@ -55,8 +66,11 @@ $(document).ready(function() {
 		            async: false
 		        });
 
-		$.getJSON('https://bnb.firebaseio.com/airbunny/example_username/rank.json', function(data) {
+		var getJSONUrl = "https://bnb.firebaseio.com/airbunny/" + emailName + "/rank.json";
+
+		$.getJSON(getJSONUrl, function(data) {
 		            console.log(data)
+		            $('#rank').html(data.rank)
 		        });
 		alert('Clicked.  Sent.');
 	})
