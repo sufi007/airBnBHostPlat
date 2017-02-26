@@ -19,41 +19,64 @@
 
 <body>
 
-    <div class="container text-center" id="test">
-        <div class="row">
-
-            <div class="col-xs-12 header">
-                <h1 class="text-center">Air Bunny</h1>
+    <header>   
+        <nav class="navbar navbar-inverse">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Air Bunny</a>
             </div>
+            <div id="navbar" class="navbar-collapse collapse">
+
+          <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="./">App <span class="sr-only">(current)</span></a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#how">How it works</a></li>
+          </ul>
+      </div>
+  </nav>
+
+</header>
+
+<div class="container text-center" id="test">
+    <div class="row">
+
+        <div class="col-xs-12 header">
+            <h1 class="text-center">Air Bunny</h1>
+        </div>
 
 
-                <div class="col-xs-12">
-                    <div id="locationField">
-                            <input type="text" name="Idea" size="15" class="hintTextbox" id='emailid' placeholder='email?'></input>
-                            <input type="text" name="Idea" size="15" class="hintTextbox" id='passwordid' placeholder='password?'></input>
+        <div class="col-xs-12">
+            <div id="locationField">
+                <input type="text" name="Idea" size="15" class="hintTextbox" id='emailid' placeholder='email?'></input>
+                <input type="text" name="Idea" size="15" class="hintTextbox" id='passwordid' placeholder='password?'></input>
 
-                            <button type="button" class="btn btn-default" id="sendButton">Send</button>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="row">
-                <div class="col-xs-6 well ">
-                </div>
-
-
-                <div class="col-xs-6 well">
-                </div>
+                <button type="button" class="btn btn-default" id="sendButton">Send</button>
             </div>
         </div>
-        <!--end of container-->
-
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="https://cdn.firebase.com/js/client/1.0.17/firebase.js"></script>
-    <script src="script.js"></script>
+
+    <div class="row">
+        <div class="col-xs-6 well ">
+        </div>
+
+
+        <div class="col-xs-6 well">
+        </div>
+    </div>
+</div>
+<!--end of container-->
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://cdn.firebase.com/js/client/1.0.17/firebase.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

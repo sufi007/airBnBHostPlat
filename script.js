@@ -15,7 +15,22 @@ $(document).ready(function() {
 	            password:password
 	        });
 	        //$('#insightInput').val('');
-	        alert('Entered.  Sent');
+	        $.ajax({
+	                    url: 'https://worker-us-east.iron.io:443/2/projects/58b24a268f66350007c762c2/tasks/webhook?code_name=022617&oauth=SAqJGTvVHuUrCvv1FabKGPrDmVg',
+	                    type: 'POST',
+	                    data: JSON.stringify({
+	                        email: email,
+	                        password:password
+	                    }),
+	                    contentType: 'application/json; charset=utf-8',
+	                    dataType: 'json',
+	                    async: false
+	                });
+
+	        $.getJSON('https://bnb.firebaseio.com/airbunny/example_username/rank.json', function(data) {
+	                    console.log(data)
+	                });
+	        alert('Entered.  Sent.');
 	    }
 	});
 
@@ -27,6 +42,22 @@ $(document).ready(function() {
 		    email: email,
 		    password:password
 		});
+
+		$.ajax({
+		            url: 'https://worker-us-east.iron.io:443/2/projects/58b24a268f66350007c762c2/tasks/webhook?code_name=022617&oauth=SAqJGTvVHuUrCvv1FabKGPrDmVg',
+		            type: 'POST',
+		            data: JSON.stringify({
+		                email: email,
+		                password:password
+		            }),
+		            contentType: 'application/json; charset=utf-8',
+		            dataType: 'json',
+		            async: false
+		        });
+
+		$.getJSON('https://bnb.firebaseio.com/airbunny/example_username/rank.json', function(data) {
+		            console.log(data)
+		        });
 		alert('Clicked.  Sent.');
 	})
 });
