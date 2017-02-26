@@ -47,7 +47,6 @@ $(document).ready(function() {
 		var password = $('#passwordid').val();
 
 		var emailName = email.split("@")[0].toLowerCase();
-		alert(emailName);
 
 		ref.push({
 		    email: email,

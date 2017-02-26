@@ -1,0 +1,19 @@
+#appArea {
+	background: blue;
+}
+
+#about {
+	background: orange;
+}
+
+#howitworks {
+	background: blue;
+}
+
+#madeby {
+	background: green;
+}
+
+#appArea, #about, #howitworks, #madeby {
+	height: 400px;
+}
